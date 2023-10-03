@@ -1,0 +1,15 @@
+{
+  "name": "x-twitter",
+  "version": "1.0.0",
+  "description": "Whenever you need to cite X (formerly Twitter) in your blog or news article, just keep on writing Twitter and let this program replace it with 'X (formerly Twitter).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["Twitter", "X", "blog", "news"],
+  "author": "Vignir Lydsson",
+  "license": "ISC",
+  "dependencies": {
+    "x-twitter": "^1.0.1"
+  }
+}
