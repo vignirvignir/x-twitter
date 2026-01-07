@@ -26,8 +26,16 @@ jobs:
         run: npm test
       - name: Verify package contents
         run: npm pack --dry-run
-      - name: Publish to npm
+      - name: Publish to npm (Trusted Publishing)
+        id: publish_trusted
+        continue-on-error: true
         env:
           NPM_CONFIG_PROVENANCE: true
+        run: |
+          npm publish --access public
+      - name: Publish to npm (token fallback)
+        if: ${{ steps.publish_trusted.outcome == 'failure' && secrets.NPM_TOKEN != '' }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           npm publish --access public
