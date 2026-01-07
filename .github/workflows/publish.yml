@@ -24,6 +24,8 @@ jobs:
           npm ci || npm install
       - name: Run tests
         run: npm test
+      - name: Verify package contents
+        run: npm pack --dry-run
       - name: Publish to npm
         env:
           NPM_CONFIG_PROVENANCE: true
