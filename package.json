@@ -1,0 +1,25 @@
+{
+  "name": "x-twitter",
+  "version": "1.0.0",
+  "description": "Whenever you need to cite X (formerly Twitter) in your blog or news article, just keep on writing Twitter and let this program replace it with 'X (formerly Twitter).",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "x",
+    "twitter",
+    "x-twitter",
+    "replace",
+    "string"
+  ],
+  "scripts": {
+    "test": "node test/run-tests.js"
+  },
+  "author": "",
+  "license": "MIT"
+}
